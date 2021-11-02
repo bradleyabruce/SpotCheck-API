@@ -52,15 +52,14 @@ namespace SpotCheck_API
 
          app.UseHttpsRedirection();
          app.UseStaticFiles();
+         app.UseRouting();
          app.UseAuthorization();
-         //app.UseRouting();
-
-         /*app.UseEndpoints(endpoints =>
+         app.UseEndpoints(endpoints =>
          {
             endpoints.MapControllerRoute(
                    name: "default",
                    pattern: "{controller}/{action}/{id?}");
-         });*/
+         });
       }
    }
 }
